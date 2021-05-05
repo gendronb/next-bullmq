@@ -1,7 +1,7 @@
 {
   "functions": {
     "pages/api/index.js": {
-      "includeFiles": "somedir/random2.txt"
+      "includeFiles": "./node_modules/bullmq/dist/commands/**"
     }
   }
 }

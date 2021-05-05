@@ -1,7 +1,7 @@
 {
   "functions": {
     "pages/api/index.js": {
-      "includeFiles": "./node_modules/bullmq/dist/commands/**"
+      "includeFiles": "included.txt"
     }
   }
 }

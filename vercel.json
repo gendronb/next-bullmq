@@ -1,7 +1,0 @@
-{
-  "functions": {
-    "pages/api/**.js": {
-      "includeFiles": "included/*.txt"
-    }
-  }
-}

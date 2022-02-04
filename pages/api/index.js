@@ -1,14 +1,10 @@
 
-const { Queue } = require('bullmq')
-const IORedis = require('ioredis')
+const Queue = require('bull')
+const testQueue = new Queue('test', process.env.REDIS_URL);
 
 export default async function handler (req, res) {
 
-  const connection = new IORedis(process.env.REDIS_URL)
-  const queue = new Queue('test', { connection })
-
-  await queue.add('test', { param: Math.random() })
-
+  await testQueue.add('test', { param: Math.random() })
   res.status(200).json({ status: 'ok' })
 
 }
